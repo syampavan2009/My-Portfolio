@@ -1,0 +1,530 @@
+/*
+ * Tailwind v4 entry: config lives here, with no tailwind.config.js or PostCSS plugin.
+ * - Keep every @import in this top block, above @theme and the rest of the file. Install an
+ *   npm package before @importing its CSS. Never @import a remote URL (web fonts, CDN CSS): the
+ *   build resolves @import from the filesystem. Load those with a <link> in the head() of
+ *   src/routes/__root.tsx and name the family in a --font-* token in @theme inline below.
+ */
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system: ELECTRIC BLUE — light by default (:root), dark under .dark
+ * Background #080D18 · Surface #0B1220 · Card #101A2B
+ * Electric #60A5FA · Cyan #67E8F9 · Text #F8FAFC / #94A3B8 · Border #1E293B
+ */
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-electric: var(--electric);
+  --color-cyan: var(--cyan);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.875rem;
+  --background: oklch(0.982 0.005 255);
+  --surface: oklch(0.962 0.012 255);
+  --foreground: oklch(0.17 0.03 262);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.17 0.03 262);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.17 0.03 262);
+  --primary: oklch(0.546 0.215 262.9);
+  --primary-foreground: oklch(0.99 0.003 250);
+  --electric: oklch(0.546 0.215 262.9);
+  --cyan: oklch(0.609 0.111 221.7);
+  --secondary: oklch(0.955 0.015 255);
+  --secondary-foreground: oklch(0.17 0.03 262);
+  --muted: oklch(0.955 0.015 255);
+  --muted-foreground: oklch(0.446 0.043 257.281);
+  --accent: oklch(0.94 0.03 255);
+  --accent-foreground: oklch(0.17 0.03 262);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0.003 250);
+  --border: oklch(0.905 0.018 255);
+  --input: oklch(0.905 0.018 255);
+  --ring: oklch(0.546 0.215 262.9);
+  --chart-1: oklch(0.546 0.215 262.9);
+  --chart-2: oklch(0.609 0.111 221.7);
+  --chart-3: oklch(0.6 0.15 260);
+  --chart-4: oklch(0.7 0.1 230);
+  --chart-5: oklch(0.45 0.12 262);
+  --sidebar: oklch(0.982 0.005 255);
+  --sidebar-foreground: oklch(0.17 0.03 262);
+  --sidebar-primary: oklch(0.546 0.215 262.9);
+  --sidebar-primary-foreground: oklch(0.99 0.003 250);
+  --sidebar-accent: oklch(0.955 0.015 255);
+  --sidebar-accent-foreground: oklch(0.17 0.03 262);
+  --sidebar-border: oklch(0.905 0.018 255);
+  --sidebar-ring: oklch(0.546 0.215 262.9);
+
+  --gradient-electric: linear-gradient(120deg, var(--electric), var(--cyan));
+  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--electric) 25%, transparent),
+    0 18px 50px -20px color-mix(in oklab, var(--electric) 40%, transparent);
+  --shadow-soft: 0 20px 50px -30px oklch(0.35 0.08 260 / 35%);
+  --scheme: light;
+  --shine: oklch(1 0 0 / 55%);
+}
+
+.dark {
+  --background: oklch(0.145 0.025 262);
+  --surface: oklch(0.17 0.03 262);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.21 0.035 260);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.17 0.03 262);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.714 0.143 254.6);
+  --primary-foreground: oklch(0.145 0.025 262);
+  --electric: oklch(0.714 0.143 254.6);
+  --cyan: oklch(0.865 0.115 207);
+  --secondary: oklch(0.21 0.035 260);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.21 0.035 260);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.25 0.05 258);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.279 0.041 260.031);
+  --input: oklch(0.279 0.041 260.031);
+  --ring: oklch(0.714 0.143 254.6);
+  --chart-1: oklch(0.714 0.143 254.6);
+  --chart-2: oklch(0.865 0.115 207);
+  --chart-3: oklch(0.6 0.15 260);
+  --chart-4: oklch(0.8 0.1 230);
+  --chart-5: oklch(0.5 0.12 262);
+  --sidebar: oklch(0.17 0.03 262);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.714 0.143 254.6);
+  --sidebar-primary-foreground: oklch(0.145 0.025 262);
+  --sidebar-accent: oklch(0.21 0.035 260);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(0.279 0.041 260.031);
+  --sidebar-ring: oklch(0.714 0.143 254.6);
+
+  --gradient-electric: linear-gradient(120deg, var(--electric), var(--cyan));
+  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--electric) 35%, transparent),
+    0 18px 50px -18px color-mix(in oklab, var(--electric) 55%, transparent);
+  --shadow-soft: 0 24px 60px -30px oklch(0 0 0 / 70%);
+  --scheme: dark;
+  --shine: oklch(1 0 0 / 14%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: var(--scheme);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--electric) 40%, transparent);
+  }
+}
+
+/* Gradient text in electric → cyan */
+@utility text-electric-gradient {
+  background-image: var(--gradient-electric);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Frosted glass panel, used sparingly */
+@utility glass {
+  background: color-mix(in oklab, var(--card) 55%, transparent);
+  backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid color-mix(in oklab, var(--electric) 18%, var(--border));
+}
+
+/* Card with a thin electric border that lights up on hover */
+@utility electric-card {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--card) 92%, var(--electric) 8%),
+    var(--card)
+  );
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 35%, var(--shine) 50%, transparent 65%);
+    transform: translateX(-120%);
+    transition: transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+    pointer-events: none;
+  }
+  &:hover {
+    transform: translateY(-6px);
+    border-color: color-mix(in oklab, var(--electric) 55%, var(--border));
+    box-shadow: var(--shadow-glow);
+  }
+  &:hover::after {
+    transform: translateX(120%);
+  }
+}
+
+/* Light sweep for buttons */
+@utility shine {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 30%, var(--shine) 50%, transparent 70%);
+    transform: translateX(-120%);
+    animation: shine-sweep 4.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+}
+
+/* Faint blueprint grid used behind sections */
+@utility grid-lines {
+  background-image:
+    linear-gradient(color-mix(in oklab, var(--electric) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, var(--electric) 7%, transparent) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+/* A glowing electric arc, drawn with a large circle's top edge */
+@utility electric-arc {
+  position: absolute;
+  border-radius: 9999px;
+  border-top: 2px solid color-mix(in oklab, var(--cyan) 80%, transparent);
+  box-shadow:
+    0 -6px 24px -4px color-mix(in oklab, var(--electric) 70%, transparent),
+    inset 0 10px 40px -10px color-mix(in oklab, var(--electric) 45%, transparent);
+  pointer-events: none;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes spark-travel {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+}
+
+@utility animate-float-slow {
+  animation: float-slow 9s ease-in-out infinite;
+}
+
+@utility animate-glow-pulse {
+  animation: glow-pulse 5s ease-in-out infinite;
+}
+
+@utility animate-spark {
+  animation: spark-travel 6s ease-in-out infinite;
+}
+
+/* Theme toggle: spark ring + zap */
+@keyframes toggle-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+@keyframes toggle-zap {
+  0% {
+    opacity: 0;
+    scale: 0.4;
+  }
+  30% {
+    opacity: 1;
+    scale: 1.2;
+  }
+  100% {
+    opacity: 0;
+    scale: 0.8;
+  }
+}
+
+@utility animate-toggle-ring {
+  animation: toggle-ring 0.7s ease-out forwards;
+}
+
+@utility animate-toggle-zap {
+  animation: toggle-zap 0.6s ease-out forwards;
+}
+
+/* Circular page reveal when switching backgrounds */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-new(root) {
+  z-index: 2;
+}
+
+/* ---------- Motion layer ---------- */
+@keyframes shine-sweep {
+  0%,
+  60% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes word-in {
+  from {
+    opacity: 0;
+    transform: translateY(45%);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+
+@keyframes draw-path {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate3d(var(--dx, 10px), var(--dy, -30px), 0);
+    opacity: 0.9;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.6em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@utility animate-word-in {
+  animation: word-in 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@utility animate-draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw-path 2.6s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@utility animate-drift {
+  animation: drift var(--dur, 8s) ease-in-out infinite;
+}
+
+@utility animate-rise-in {
+  animation: rise-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@utility animate-orbit {
+  animation: orbit 14s linear infinite;
+}
+
+/* Eyebrow line that draws itself when its section appears */
+.draw-line {
+  width: 0;
+  transition: width 0.9s 0.25s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.is-visible .draw-line {
+  width: 2.5rem;
+}
+
+/* Children pop in one after another once their parent is visible */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(10px) scale(0.96);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1),
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+  transition-delay: calc(var(--i, 0) * 70ms + 250ms);
+}
+.is-visible .stagger > * {
+  opacity: 1;
+  transform: none;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-float-slow,
+  .animate-glow-pulse,
+  .animate-spark,
+  .animate-drift,
+  .animate-orbit,
+  .shine::after {
+    animation: none;
+  }
+  .animate-word-in,
+  .animate-rise-in {
+    animation: none;
+    opacity: 1;
+  }
+  .animate-draw {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .draw-line {
+    width: 2.5rem;
+    transition: none;
+  }
+  .stagger > * {
+    opacity: 1;
+    transform: none;
+  }
+}

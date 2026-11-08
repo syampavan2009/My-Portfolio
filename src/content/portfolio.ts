@@ -93,7 +93,7 @@ export const education = [
     badge: "Undergraduate",
   },
   {
-    institution: "NIAT (National Institute of Advanced Technologies)",
+    institution: "NIAT",
     course: "Professional Technical Upskilling Program",
     period: "2026 — Present",
     year: "Enrolled",

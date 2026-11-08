@@ -1,137 +1,228 @@
 /**
- * All portfolio text lives here. Replace any text in [square brackets]
- * with your real details. Leave a link as "" to show it as "coming soon".
+ * All portfolio text lives here.
+ * Contains personal details, education history, about narrative, projects, and contact channels.
  */
 
 import projectPreviewWeb from "@/assets/project-preview-web.jpg";
 import projectPreviewPython from "@/assets/project-preview-python.jpg";
 import projectPreviewApp from "@/assets/project-preview-app.jpg";
+import profilePhoto from "@/assets/profile.jpg";
 
 export const profile = {
   name: "BEZAWADA SYAM PAVAN PRATAP",
   shortName: "Syam Pavan",
   initials: "BS",
   greeting: "Hello, I'm",
-  title: "Student & Aspiring Developer",
+  title: "1st-Year B.Tech Student · CSE (AI)",
   intro:
     "I am an engineer building the foundational logic that combines human intelligence with machine capabilities.",
-  tagline: "Building thoughtful things for the web, one line at a time.",
-  /** Path or URL to your photo. Leave "" to show the placeholder. */
-  photo: "",
-  location: "[Vijayawada, India]",
-  status: "Open to internships & collaborations",
+  tagline: "Building thoughtful, impactful solutions for the future of technology.",
+  /** Path to your portrait photo */
+  photo: profilePhoto,
+  location: "Vijayawada, India",
+  status: "1st Year B.Tech · Open to internships & collaborations",
   /** Words that cycle in the hero after "I work with". */
-  rotatingWords: ["Python", "JavaScript", "HTML & CSS", "Web Design", "Problem Solving"],
+  rotatingWords: [
+    "Artificial Intelligence",
+    "Python",
+    "Web Development",
+    "Machine Capabilities",
+    "Problem Solving",
+  ],
 };
 
 export const about = {
   heading: "Curious by nature, developer by choice.",
+  eyebrow: "About Me",
   bio: [
-    "[Your introduction — a short paragraph about who you are, where you study, and what you care about.]",
-    "[Your learning journey — how you discovered programming, what you have explored so far, and what keeps you going.]",
+    "I am a first-year B.Tech student in Computer Science and Engineering with a specialization in Artificial Intelligence at Joy University. Passionate and highly motivated by emerging technologies, I thrive on exploring how deep computational logic and modern engineering solve real-world problems.",
+    "My journey began with core programming in Python and web technologies, steadily evolving into an active pursuit of Artificial Intelligence and intelligent systems. I believe in hands-on experimentation, building clean, scalable code, and learning continuously to turn complex ideas into practical digital solutions.",
   ],
   cards: [
-    { label: "Academic status", value: "[e.g. 2nd-year B.Tech student]" },
-    { label: "Interest in tech", value: "[e.g. Web development & UI design]" },
-    { label: "Learning journey", value: "[e.g. Self-taught since 2023]" },
-    { label: "Career ambition", value: "[e.g. Become a full-stack engineer]" },
+    {
+      label: "Academic status",
+      value: "1st-Year B.Tech in CSE (AI)",
+      subtitle: "Joy University · 2026–2030",
+    },
+    {
+      label: "Interest in tech",
+      value: "AI & Modern Web Development",
+      subtitle: "Solving real-world challenges",
+    },
+    {
+      label: "Learning journey",
+      value: "Programming Basics to AI",
+      subtitle: "Continuous experimentation & skill growth",
+    },
+    {
+      label: "Career ambition",
+      value: "Impactful Software Developer",
+      subtitle: "Building innovative, meaningful products",
+    },
+  ],
+  journey: [
+    {
+      step: "01",
+      title: "Programming Foundations",
+      period: "Early Steps",
+      desc: "Discovered programming through Python and structured logic, mastering algorithmic thinking, data manipulation, and core programming principles.",
+    },
+    {
+      step: "02",
+      title: "Web Technologies & Interfaces",
+      period: "Practical Exploration",
+      desc: "Explored HTML, CSS, JavaScript, Git, and GitHub to create responsive, intuitive interfaces and understand modern full-stack web architectures.",
+    },
+    {
+      step: "03",
+      title: "AI & Machine Capabilities",
+      period: "Current Focus · 1st Year",
+      desc: "Specializing in AI at Joy University, studying foundational machine intelligence, intelligent algorithms, and building software that bridges human and artificial capabilities.",
+    },
   ],
 };
 
 export const education = [
   {
-    institution: "[Your College / University name]",
-    course: "[Degree — e.g. B.Tech in Computer Science]",
-    period: "[20XX — Present]",
-    year: "[Current year — e.g. 2nd Year]",
-    details: "[Relevant details — CGPA, focus subjects, clubs or coursework.]",
+    institution: "Joy University",
+    course: "B.Tech — Computer Science & Engineering (Specialization in AI)",
+    period: "2026 — 2030",
+    year: "1st Year",
+    details:
+      "Pursuing undergraduate studies with a specialized focus on Artificial Intelligence and core computer science fundamentals. Engaging in hands-on coding, algorithm design, and modern technological concepts.",
+    grade: "1st Year · In Progress",
+    badge: "Undergraduate",
   },
   {
-    institution: "[Your Intermediate / Higher Secondary school]",
-    course: "[Course — e.g. MPC]",
-    period: "[20XX — 20XX]",
-    year: "[Completed]",
-    details: "[Relevant details — percentage, subjects or highlights.]",
+    institution: "Sri Srinivasa Gravity Junior College",
+    course: "Higher Secondary — MPC (Mathematics, Physics, Chemistry)",
+    period: "2 Years",
+    year: "Completed",
+    details:
+      "Graduated with an outstanding academic achievement of 98.2%. Built strong analytical thinking, advanced mathematical reasoning, and a rigorous scientific foundation.",
+    grade: "98.2%",
+    badge: "Junior College",
   },
   {
-    institution: "[Your School name]",
-    course: "[Secondary School Certificate]",
-    period: "[20XX]",
-    year: "[Completed]",
-    details: "[Relevant details — grade or highlights.]",
+    institution: "Viswa Bharathi E.M High School, Gudivada",
+    course: "Secondary School Certificate (SSC)",
+    period: "Completed",
+    year: "Completed",
+    details:
+      "Achieved a high academic distinction of 97.83%, fostering a strong discipline for academic excellence, curiosity for technology, and early passion for science.",
+    grade: "97.83%",
+    badge: "High School",
   },
 ];
 
 export const skills = [
   {
     category: "Programming Languages",
-    items: ["Python", "HTML", "CSS", "JavaScript"],
+    items: ["Python", "JavaScript", "HTML", "CSS"],
   },
   {
-    category: "Technical Skills",
-    items: ["Front-End Development", "Web Design", "Problem Solving", "Basic Programming"],
+    category: "Technical & Specialization Areas",
+    items: [
+      "Artificial Intelligence Fundamentals",
+      "Front-End Web Development",
+      "Algorithmic Problem Solving",
+      "Responsive UI Design",
+    ],
   },
   {
-    category: "Tools",
+    category: "Developer Tools",
     items: ["Visual Studio Code", "Git", "GitHub"],
   },
 ];
 
 /**
- * Projects. `image` is the preview picture — the current ones are sample
- * illustrations; swap in a screenshot of your real project.
- * Keep `summary` to one short sentence and `highlights` to 2–3 words each.
+ * Projects. Keep summary to one short sentence and highlights to 2–3 words each.
  */
 export const projects = [
   {
-    title: "[Project title 01]",
+    title: "Electric Arc Portfolio",
     image: projectPreviewWeb,
-    imageIsSample: true,
-    summary: "[One sentence: what it is and who it helps.]",
-    highlights: ["[Key feature]", "[Key feature]", "[What you learned]"],
-    tech: ["HTML", "CSS", "JavaScript"],
+    imageIsSample: false,
+    summary: "Personal developer portfolio built with TanStack Start, React 19, and Tailwind CSS.",
+    highlights: ["Interactive UI", "Cyber Aesthetic", "Responsive Design"],
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
     liveUrl: "https://electric-arc-portfolio.lovable.app",
-    githubUrl: "https://github.com/syampavan2009/electric-arc-portfolio",
+    githubUrl: "https://github.com/syampavan2009/portfolio",
+  },
+  {
+    title: "AI Logic & Problem Solving",
+    image: projectPreviewPython,
+    imageIsSample: true,
+    summary: "Exploratory algorithms and computational problem-solving scripts in Python.",
+    highlights: ["Data Structures", "Python Core", "Clean Logic"],
+    tech: ["Python", "Algorithms", "Git"],
+    liveUrl: "",
+    githubUrl: "https://github.com/syampavan2009",
+  },
+  {
+    title: "Interactive Web Systems",
+    image: projectPreviewApp,
+    imageIsSample: true,
+    summary: "Responsive client-side web components with modular JavaScript architecture.",
+    highlights: ["Modern DOM", "Modular UI", "Git Workflow"],
+    tech: ["JavaScript", "HTML5", "CSS3"],
+    liveUrl: "",
+    githubUrl: "https://github.com/syampavan2009",
   },
 ];
 
 export const achievements = [
-  { type: "Certifications", title: "[Certificate name]", detail: "[Issuer · Year]" },
-  { type: "Academic", title: "[Academic achievement]", detail: "[Institution · Year]" },
-  { type: "Workshops", title: "[Workshop attended]", detail: "[Organiser · Year]" },
-  { type: "Competitions", title: "[Competition / hackathon]", detail: "[Result · Year]" },
-  { type: "Milestones", title: "[Personal milestone]", detail: "[Short note]" },
+  {
+    type: "Academic Excellence",
+    title: "98.2% in Intermediate (MPC)",
+    detail: "Sri Srinivasa Gravity Junior College",
+  },
+  {
+    type: "Academic Excellence",
+    title: "97.83% in Secondary School (SSC)",
+    detail: "Viswa Bharathi E.M High School, Gudivada",
+  },
+  {
+    type: "Specialization",
+    title: "Admitted to B.Tech CSE (AI Specialization)",
+    detail: "Joy University (2026–2030 Batch)",
+  },
+  {
+    type: "Technical Milestones",
+    title: "Core Python & Web Logic Mastery",
+    detail: "Independent development & continuous learning",
+  },
 ];
 
 export const interests = [
   {
     kind: "Technology interests",
-    title: "[e.g. Web & UI engineering]",
-    text: "[One line on why this area excites you.]",
+    title: "Artificial Intelligence & Intelligent Systems",
+    text: "Fascinated by combining human intuition with machine capabilities to solve real-world problems.",
   },
   {
     kind: "Programming interests",
-    title: "[e.g. Clean, readable code]",
-    text: "[One line on the kind of code you enjoy writing.]",
+    title: "Clean, Scalable & Readable Code",
+    text: "Dedicated to writing robust, well-structured logic with strong algorithmic foundations.",
   },
   {
     kind: "Current learning goals",
-    title: "[e.g. React & TypeScript]",
-    text: "[One line on what you are learning right now.]",
+    title: "Advanced AI Architectures & Modern Web",
+    text: "Deepening knowledge in computational learning models, React, and full-stack systems.",
   },
   {
     kind: "Career aspirations",
-    title: "[e.g. Software engineer]",
-    text: "[One line on where you want to be in a few years.]",
+    title: "High-Impact Software & AI Engineer",
+    text: "Aspiring to build innovative products and engineering breakthroughs that impact society.",
   },
 ];
 
-/** Leave a value as "" until you add the real one — it will show as "Add your …". */
 export const contact = {
   heading: "Let's build something meaningful together.",
-  text: "I'm always open to learning opportunities, internships and interesting collaborations. Reach out — I usually reply within a day or two.",
-  email: "",
-  linkedin: "",
+  text: "I'm always open to learning opportunities, technical conversations, internships, and student collaborations. Reach out — I usually reply within a day or two.",
+  email: "syampavanbezawada03@gmail.com",
+  linkedin: "https://www.linkedin.com/in/syam-pavan-pratap-bezawada",
+  linkedinDisplay: "Syam Pavan Pratap Bezawada",
   github: "https://github.com/syampavan2009",
   form: {
     heading: "Send me a message",

@@ -4,7 +4,6 @@
  */
 
 import projectPreviewWeb from "@/assets/project-preview-web.jpg";
-import projectPreviewPython from "@/assets/project-preview-python.jpg";
 import projectPreviewApp from "@/assets/project-preview-app.jpg";
 import profilePhoto from "@/assets/profile.jpg";
 
@@ -13,7 +12,7 @@ export const profile = {
   shortName: "Syam Pavan",
   initials: "BS",
   greeting: "Hello, I'm",
-  title: "1st-Year B.Tech Student · CSE (AI)",
+  title: "1st-Year B.Tech Student · CSE (AI) · NIAT Scholar",
   intro:
     "I am an engineer building the foundational logic that combines human intelligence with machine capabilities.",
   tagline: "Building thoughtful, impactful solutions for the future of technology.",
@@ -25,8 +24,8 @@ export const profile = {
   rotatingWords: [
     "Artificial Intelligence",
     "Python",
+    "n8n Automation",
     "Web Development",
-    "Machine Capabilities",
     "Problem Solving",
   ],
 };
@@ -35,24 +34,24 @@ export const about = {
   heading: "Curious by nature, developer by choice.",
   eyebrow: "About Me",
   bio: [
-    "I am a first-year B.Tech student in Computer Science and Engineering with a specialization in Artificial Intelligence at Joy University. Passionate and highly motivated by emerging technologies, I thrive on exploring how deep computational logic and modern engineering solve real-world problems.",
-    "My journey began with core programming in Python and web technologies, steadily evolving into an active pursuit of Artificial Intelligence and intelligent systems. I believe in hands-on experimentation, building clean, scalable code, and learning continuously to turn complex ideas into practical digital solutions.",
+    "I am a first-year B.Tech student in Computer Science and Engineering with a specialization in Artificial Intelligence at Joy University, concurrently advancing my technical and engineering competencies through the NIAT Upskilling Program. Passionate and highly motivated by emerging technologies, I thrive on exploring how deep computational logic, intelligent algorithms, and modern systems solve real-world problems.",
+    "My learning journey spans core programming in Python, modern web development, and event-driven automation using n8n workflows. Through hands-on experimentation at Joy University and the NIAT Upskilling Program, I focus on building practical, scalable, and intelligent software that bridges human and machine capabilities.",
   ],
   cards: [
     {
       label: "Academic status",
       value: "1st-Year B.Tech in CSE (AI)",
-      subtitle: "Joy University · 2026–2030",
+      subtitle: "Joy University & NIAT Upskilling",
     },
     {
       label: "Interest in tech",
-      value: "AI & Modern Web Development",
+      value: "AI, Web & n8n Automation",
       subtitle: "Solving real-world challenges",
     },
     {
       label: "Learning journey",
-      value: "Programming Basics to AI",
-      subtitle: "Continuous experimentation & skill growth",
+      value: "Joy University & NIAT Program",
+      subtitle: "Continuous practical skill growth",
     },
     {
       label: "Career ambition",
@@ -65,19 +64,19 @@ export const about = {
       step: "01",
       title: "Programming Foundations",
       period: "Early Steps",
-      desc: "Discovered programming through Python and structured logic, mastering algorithmic thinking, data manipulation, and core programming principles.",
+      desc: "Discovered programming through Python and structured logic, mastering algorithmic thinking, data manipulation, and core computational problem solving.",
     },
     {
       step: "02",
-      title: "Web Technologies & Interfaces",
+      title: "Web Interfaces & Automation",
       period: "Practical Exploration",
-      desc: "Explored HTML, CSS, JavaScript, Git, and GitHub to create responsive, intuitive interfaces and understand modern full-stack web architectures.",
+      desc: "Explored HTML, CSS, JavaScript, Git/GitHub, and n8n workflow automation to create responsive interfaces and automated event-driven pipelines.",
     },
     {
       step: "03",
-      title: "AI & Machine Capabilities",
+      title: "AI Specialization & NIAT Upskilling",
       period: "Current Focus · 1st Year",
-      desc: "Specializing in AI at Joy University, studying foundational machine intelligence, intelligent algorithms, and building software that bridges human and artificial capabilities.",
+      desc: "Specializing in AI at Joy University alongside intensive technical training with the NIAT Upskilling Program, building software that bridges human intuition and machine intelligence.",
     },
   ],
 };
@@ -92,6 +91,16 @@ export const education = [
       "Pursuing undergraduate studies with a specialized focus on Artificial Intelligence and core computer science fundamentals. Engaging in hands-on coding, algorithm design, and modern technological concepts.",
     grade: "1st Year · In Progress",
     badge: "Undergraduate",
+  },
+  {
+    institution: "NIAT (National Institute of Advanced Technologies)",
+    course: "Professional Technical Upskilling Program",
+    period: "2026 — Present",
+    year: "Enrolled",
+    details:
+      "Undergoing rigorous, industry-aligned technical training covering modern software engineering, workflow automation, and practical system building to complement university academics.",
+    grade: "In Progress",
+    badge: "Upskilling Program",
   },
   {
     institution: "Sri Srinivasa Gravity Junior College",
@@ -109,7 +118,7 @@ export const education = [
     period: "Completed",
     year: "Completed",
     details:
-      "Achieved a high academic distinction of 97.83%, fostering a strong discipline for academic excellence, curiosity for technology, and early passion for science.",
+      "Achieved a high academic distinction of 97.83%, fostering early intellectual discipline, curiosity for technology, and a solid foundation in mathematics and science.",
     grade: "97.83%",
     badge: "High School",
   },
@@ -117,13 +126,14 @@ export const education = [
 
 export const skills = [
   {
-    category: "Programming Languages",
-    items: ["Python", "JavaScript", "HTML", "CSS"],
+    category: "Programming & Automation",
+    items: ["Python", "JavaScript", "HTML", "CSS", "n8n Automation"],
   },
   {
     category: "Technical & Specialization Areas",
     items: [
       "Artificial Intelligence Fundamentals",
+      "n8n Workflow Automation",
       "Front-End Web Development",
       "Algorithmic Problem Solving",
       "Responsive UI Design",
@@ -131,12 +141,12 @@ export const skills = [
   },
   {
     category: "Developer Tools",
-    items: ["Visual Studio Code", "Git", "GitHub"],
+    items: ["Visual Studio Code", "n8n", "Git", "GitHub"],
   },
 ];
 
 /**
- * Projects. Keep summary to one short sentence and highlights to 2–3 words each.
+ * Projects.
  */
 export const projects = [
   {
@@ -150,22 +160,12 @@ export const projects = [
     githubUrl: "https://github.com/syampavan2009/portfolio",
   },
   {
-    title: "AI Logic & Problem Solving",
-    image: projectPreviewPython,
-    imageIsSample: true,
-    summary: "Exploratory algorithms and computational problem-solving scripts in Python.",
-    highlights: ["Data Structures", "Python Core", "Clean Logic"],
-    tech: ["Python", "Algorithms", "Git"],
-    liveUrl: "",
-    githubUrl: "https://github.com/syampavan2009",
-  },
-  {
-    title: "Interactive Web Systems",
+    title: "n8n Intelligent Automation Workflows",
     image: projectPreviewApp,
-    imageIsSample: true,
-    summary: "Responsive client-side web components with modular JavaScript architecture.",
-    highlights: ["Modern DOM", "Modular UI", "Git Workflow"],
-    tech: ["JavaScript", "HTML5", "CSS3"],
+    imageIsSample: false,
+    summary: "Automated event-driven workflow pipelines connecting webhooks, APIs, and AI tools for smart task execution.",
+    highlights: ["Workflow Automation", "API Integration", "AI Tooling"],
+    tech: ["n8n", "Webhooks", "REST APIs", "AI Automation"],
     liveUrl: "",
     githubUrl: "https://github.com/syampavan2009",
   },
@@ -173,24 +173,25 @@ export const projects = [
 
 export const achievements = [
   {
-    type: "Academic Excellence",
-    title: "98.2% in Intermediate (MPC)",
-    detail: "Sri Srinivasa Gravity Junior College",
+    type: "AI Workshop Certification",
+    title: "BE-10X Workshop Certificate",
+    detail: "AI Tools & ChatGPT Workshop · Issued September 13th, 2026",
+    certificateUrl: "/be10x-certificate.pdf",
   },
   {
-    type: "Academic Excellence",
-    title: "97.83% in Secondary School (SSC)",
-    detail: "Viswa Bharathi E.M High School, Gudivada",
-  },
-  {
-    type: "Specialization",
+    type: "Technical Specialization",
     title: "Admitted to B.Tech CSE (AI Specialization)",
     detail: "Joy University (2026–2030 Batch)",
   },
   {
+    type: "Industry Upskilling",
+    title: "NIAT Professional Upskilling Program",
+    detail: "Advanced hands-on technical software engineering training",
+  },
+  {
     type: "Technical Milestones",
-    title: "Core Python & Web Logic Mastery",
-    detail: "Independent development & continuous learning",
+    title: "Core Python & Workflow Automation",
+    detail: "Building automated workflows & algorithmic logic",
   },
 ];
 

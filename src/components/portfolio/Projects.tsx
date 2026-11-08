@@ -105,7 +105,7 @@ export function Projects() {
           />
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className={cn("grid gap-6 md:grid-cols-2", projects.length <= 2 ? "max-w-4xl mx-auto" : "lg:grid-cols-3")}>
           {projects.map((p, i) => (
             <Reveal key={i} delay={i * 110}>
               <article className="electric-card group flex h-full flex-col rounded-2xl p-4">

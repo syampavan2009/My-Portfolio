@@ -1,4 +1,4 @@
-import { Award, BookMarked, Flag, Presentation, Trophy } from "lucide-react";
+import { ArrowUpRight, Award, BookMarked, Flag, Presentation, Trophy } from "lucide-react";
 import { achievements, interests } from "@/content/portfolio";
 import { Brain, Code, Target, TrendingUp } from "lucide-react";
 import { Reveal, SectionHeading } from "./shared";
@@ -17,23 +17,38 @@ export function Achievements() {
           description="Certifications, workshops and wins — added as they happen."
         />
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {achievements.map((a, i) => {
             const Icon = achievementIcons[i % achievementIcons.length]!;
             return (
               <Reveal key={`${a.type}-${i}`} delay={i * 80}>
-                <div className="electric-card group h-full rounded-2xl p-6">
-                  <Icon
-                    className="h-6 w-6 text-electric transition-colors duration-300 group-hover:text-cyan"
-                    strokeWidth={1.5}
-                  />
-                  <p className="mt-6 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-                    {a.type}
-                  </p>
-                  <h3 className="mt-2 font-display text-base font-semibold leading-snug text-foreground">
-                    {a.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{a.detail}</p>
+                <div className="electric-card group flex h-full flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-electric/50">
+                  <div>
+                    <Icon
+                      className="h-6 w-6 text-electric transition-colors duration-300 group-hover:text-cyan"
+                      strokeWidth={1.5}
+                    />
+                    <p className="mt-6 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+                      {a.type}
+                    </p>
+                    <h3 className="mt-2 font-display text-base font-semibold leading-snug text-foreground">
+                      {a.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{a.detail}</p>
+                  </div>
+                  {(a as any).certificateUrl && (
+                    <div className="pt-4 mt-4 border-t border-border/50">
+                      <a
+                        href={(a as any).certificateUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-cyan/40 bg-cyan/10 px-3 py-1 text-xs font-semibold text-cyan transition-all hover:bg-cyan/20 hover:scale-105"
+                      >
+                        <span>View Certificate</span>
+                        <ArrowUpRight className="h-3.5 w-3.5" />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </Reveal>
             );

@@ -157,7 +157,7 @@ export const projects = [
     highlights: ["Interactive UI", "Cyber Aesthetic", "Responsive Design"],
     tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
     liveUrl: "https://electric-arc-portfolio.lovable.app",
-    githubUrl: "https://github.com/syampavan2009/portfolio",
+    githubUrl: "https://github.com/syampavan2009/My-Portfolio",
   },
   {
     title: "n8n Intelligent Automation Workflows",
